@@ -254,6 +254,7 @@ header a#main-category-toggler-close{
 	padding-left: 20px;
 	background-color: #525252;
 	margin: 0px;
+	height: 40px;
 }
 .search-form input[type="submit"] {
 	background-repeat: no-repeat;
