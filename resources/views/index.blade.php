@@ -64,7 +64,7 @@
                             <div class="thumb"><img
                                     src="{{asset('/demo_img/ch-8.jpg') }}" alt="">
                             </div>
-                            <h2>مهرداد سامی</h2>
+                            <h2 class="mb-10">مهرداد سامی</h2>
                             <h3>25 اشتراک</h3>
                             <i class="fa fa-angle-down"></i>
                         </a>

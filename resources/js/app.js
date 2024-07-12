@@ -1,5 +1,6 @@
 import './bootstrap';
 import "../css/style.css"
+import "../css/my-style.css"
 import "../css/responsive.css"
 import "../css/bootstrap.min.css"
 import "./jquery-3.2.1.min"
