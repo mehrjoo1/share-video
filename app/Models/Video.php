@@ -15,4 +15,10 @@ class Video extends Model
     public function getLengthAttribute($value){
         return gmdate("H:i:s" , $value);
     }
+
+    // اکسسور برای ایجاد تاریخ فارسی
+    // ابتدا کتابخانه ورتا نصب شد بعد مثل حالت اکسسور ساعت استفاده شد
+    public function getCreatedatAttribute($value){
+        return verta($value)->formatDifference();
+    }
 }
