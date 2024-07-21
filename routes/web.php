@@ -5,6 +5,9 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [IndexController::class, 'index']);
+Route::get('/create', function(){
+    return view("videos.add");
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
