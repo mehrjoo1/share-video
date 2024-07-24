@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [IndexController::class, 'index']);
 Route::get('videos/create',[VideoController::class,'create']);
+Route::post('videos',[VideoController::class,'store']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
