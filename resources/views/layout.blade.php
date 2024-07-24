@@ -97,6 +97,11 @@
 
     <div class="site-output">
         <div id="all-output" class="col-md-12">
+            @if (session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
             {{-- @yield('content'): این قسمت قابلیت گسترش دارد . ارث بری در لایه بندی --}}
             @yield('content')
         </div>

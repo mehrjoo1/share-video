@@ -18,6 +18,6 @@ class VideoController extends Controller
         Video::create(
             $request->all()
         );
-        return redirect()->route('index');
+        return redirect()->route('index')->with('success','عملیات موفق بود');
     }
 }
