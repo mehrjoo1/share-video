@@ -5,9 +5,9 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\VideoController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [IndexController::class, 'index']);
-Route::get('videos/create',[VideoController::class,'create']);
-Route::post('videos',[VideoController::class,'store']);
+Route::get('/', [IndexController::class, 'index'])->name('index');
+Route::get('videos/create',[VideoController::class,'create'])->name('videos.create');
+Route::post('videos',[VideoController::class,'store'])->name('videos.store');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

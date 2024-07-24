@@ -18,5 +18,6 @@ class VideoController extends Controller
         Video::create(
             $request->all()
         );
+        return redirect()->route('index');
     }
 }
