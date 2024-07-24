@@ -39,7 +39,7 @@
             </div><!-- // col-md-8 -->
 
             <div class="col-md-4">
-                <a href="#"><img src="demo_img/upload-adv.png" alt=""></a>
+                <a href="#"><img src="/demo_img/upload-adv.png" alt=""></a>
             </div><!-- // col-md-8 -->
             <!-- // upload -->
         </div><!-- // row -->
