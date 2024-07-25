@@ -25,6 +25,6 @@ class VideoController extends Controller
         Video::create(
             $request->all()
         );
-        return redirect()->route('index')->with('success','عملیات موفق بود');
+        return redirect()->route('index')->with('success',__('massage.success'));
     }
 }
