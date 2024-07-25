@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreVideosRequest;
 use App\Models\Video;
 use Illuminate\Http\Request;
 
@@ -13,15 +14,9 @@ class VideoController extends Controller
         return view("videos.add");
     }
 
-    public function store(Request $request){
+    public function store(StoreVideosRequest $request){
         // dd($request->all());
-        $request->validate([
-            'name' => ['required'],
-            'length' => ['required','integer'],
-            'slug' => ['required','unique:videos,slug'],
-            'url' => ['required','url'],
-            'thumbnail' => ['required','url'],
-        ]);
+       
         Video::create(
             $request->all()
         );
