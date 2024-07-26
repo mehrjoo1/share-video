@@ -22,4 +22,8 @@ class Video extends Model
     public function getCreatedatAttribute($value){
         return verta($value)->formatDifference();
     }
+
+    public function relatedVideos(int $count = 6){
+        return video::all()->random($count);
+    }
 }

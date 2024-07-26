@@ -5,3 +5,13 @@
 body *{
     font-family: IRANSansWeb;
 }
+#comments .form-control {
+    border-radius: 3px;
+}
+.post-comments input{
+    margin: 10px 0;
+}
+a.subscribe {
+    padding: 6px 0;
+}
+
