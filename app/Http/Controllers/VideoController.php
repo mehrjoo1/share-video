@@ -23,8 +23,11 @@ class VideoController extends Controller
         return redirect()->route('index')->with('success',__('massage.success'));
     }
 
-    public function show(Request $request,int $id){
-        $video = Video::find($id);
+    public function show(Request $request,video $video){
+        // $video = Video::find($id);
+        // if($video == null){
+        //     abort(404);
+        // }
         return view('videos.show',compact('video'));
     }
 }
