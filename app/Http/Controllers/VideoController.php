@@ -34,4 +34,10 @@ class VideoController extends Controller
     public function edit(video $video){
         return view('videos.edit',compact('video'));
     }
+    public function update(Request $request,video $video){
+        $video->update(
+            $request->all()
+        );
+        return redirect()->route('videos.show',$video->slug)->with('success',__('massage.update'));
+    }
 }
