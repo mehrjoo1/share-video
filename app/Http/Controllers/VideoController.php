@@ -30,4 +30,8 @@ class VideoController extends Controller
         // }
         return view('videos.show',compact('video'));
     }
+
+    public function edit(video $video){
+        return view('videos.edit',compact('video'));
+    }
 }

@@ -21,8 +21,8 @@ class Video extends Model
     // ساخت یک اکسِسور برای تبدیل عدد به فرمت ساعت
     // نحوه استفاده بصورت زیر . نام گذاری تابع هم بعد از گت اسم ستون و بعدش کلمه اتریبیوت
     // این خودش میاد عنصرتون رو اول از همه به فرمت ساعت تغییر میده و موقع نمایش هم نیاز نیست کاری بکنید
-    public function getLengthAttribute($value){
-        return gmdate("H:i:s" , $value);
+    public function getLengthInHumenAttribute(){
+        return gmdate("H:i:s" , $this->length);
     }
 
     // اکسسور برای ایجاد تاریخ فارسی

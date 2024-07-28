@@ -2,12 +2,15 @@
     <div class="video-item">
         <div class="thumb">
             <div class="hover-efect"></div>
-            <small class="time">{{ $video->length }}</small>
+            <small class="time">{{ $video->lengthInHumen }}</small>
             <a href="{{route('videos.show',$video->slug)}}"><img src="{{ $video->thumbnail }}" alt=""></a>
         </div>
         <div class="video-info">
             <a href="{{route('videos.show',$video->slug)}}" class="title">
                 {{ $video->name }}
+            </a>
+            <a href="{{route('videos.edit',$video->slug)}}" class="title">
+                ویرایش
             </a>
             <a class="channel-name" href="{{route('videos.show',$video->slug)}}">مهرداد سامی<span>
                     <i class="fa fa-check-circle"></i></span></a>
