@@ -31,7 +31,7 @@
                         </div>
                         <div class="col-md-12">
                             <label>@lang('videos.description')</label>
-                            <textarea class="form-control" name="description" rows="4" value="{{$video->description}}" placeholder="@lang('videos.description')"></textarea>
+                            <textarea class="form-control" name="description" rows="4" placeholder="@lang('videos.description')">{{$video->description}}</textarea>
                         </div>
                         <div class="col-md-2">
                             <button type="submit" id="contact_submit" class="btn btn-dm">ذخیره</button>
