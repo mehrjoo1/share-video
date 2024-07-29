@@ -23,7 +23,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('videos', function (Blueprint $table) {
-            // remove forign key
+            // remove Foreign key
             // dropColumn
             $table->dropForeign(['category_id']);
             $table->dropColumn('category_id');
