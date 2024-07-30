@@ -12,4 +12,8 @@ class Category extends Model
     public function videos(){
         return $this->hasMany(Video::class);
     }
+
+    public function getRoutekeyName(){
+        return 'slug';
+    }
 }
