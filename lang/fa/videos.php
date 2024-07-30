@@ -7,4 +7,5 @@ return [
     'url' => 'آدرس ویدئو',
     'thumbnail' => 'تصویر بند انگشتی',
     'description' => 'توضیحات',
+    'category' => 'دسته بندی',
 ];

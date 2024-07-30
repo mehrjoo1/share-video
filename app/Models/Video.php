@@ -9,7 +9,7 @@ class Video extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name','slug','url','length','description','thumbnail'];
+    protected $fillable = ['name','slug','url','length','description','thumbnail','category_id'];
 
      // gerRoutekeyName : این فانکشن کارش اینه که
     //  روت مدل بایندینگ را از آی دی (دیفالت) به چیزی که شما میخواهید تغییر دهد
