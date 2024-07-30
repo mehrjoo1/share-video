@@ -38,5 +38,12 @@ class Video extends Model
     public function category(){
         return $this->belongsTo(Category::class);
     }
+
+    // این تابع به خاطر این است که اگر نام ستون دسته بندی رو تغییر دادید به چیز دیگه ای
+    // دیگه نیاید تو همه فایل هایی که برای نمایش دسته بندی گذاشتید تغییر ایجاد کنید
+    // برای نمایش : $video->category_name
+    public function getCategoryNameAttribute(){
+        return $this->category?->name;
+    }
    
 }
