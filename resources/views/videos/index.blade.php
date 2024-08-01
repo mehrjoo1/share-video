@@ -8,7 +8,7 @@
         @endforeach
     </div>
     
-    <div class="text-center">
+    <div class="text-center" dir="ltr">
         {{ $videos->links() }}
     </div>
     
