@@ -132,6 +132,8 @@ return [
         'thumbnail' => 'تصویر بند انگشتی',
         'description' => 'توضیحات',
         'category_id' => 'دسته بندی',
+        'password' => 'رمز عبور',
+        'email' => 'ایمیل',
     ],
 
 ];
