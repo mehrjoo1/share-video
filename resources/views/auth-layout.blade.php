@@ -30,12 +30,13 @@
 </head>
 
 <body class="@yield('class-body')">
-    @if (session('success'))
-        <div class="alert alert-success">
-            {{ session('success') }}
-            hh
-        </div>
-    @endif
+        @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
+
+
     @yield('content')
 </body>
 

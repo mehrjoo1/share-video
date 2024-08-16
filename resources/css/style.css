@@ -653,7 +653,7 @@ header ul.account-menu{
 	padding-bottom: 30px;
 	padding-left: 0px;
 	}
-header ul.account-menu li a{
+header ul.account-menu li a,header ul.account-menu li form{
 	font-family: 'IRANSansWeb', sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -667,7 +667,7 @@ header ul.account-menu li a{
 	border-bottom-style: solid;
 	border-bottom-color: #ececec;
 }
-header ul.account-menu li a .fa{
+header ul.account-menu li a .fa,header ul.account-menu li form .fa{
 	padding-left: 10px;
 }
 header ul.account-menu li  .color-1{

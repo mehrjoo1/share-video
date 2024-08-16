@@ -59,23 +59,37 @@
                 <div class="col-lg-2 col-md-2 col-sm-4 hidden-xs hidden-sm">
                     <!--  -->
                 </div>
-                <div class="col-lg-2 col-md-2 col-sm-3 hidden-xs hidden-sm">
-                    <div class="dropdown">
-                        <a data-toggle="dropdown" href="#" class="user-area">
-                            <div class="thumb"><img src="{{ asset('/demo_img/ch-8.jpg') }}" alt="">
-                            </div>
-                            <h2 class="mb-10">مهرداد سامی</h2>
-                            <h3>25 اشتراک</h3>
-                            <i class="fa fa-angle-down"></i>
-                        </a>
-                        <ul class="dropdown-menu account-menu">
-                            <li><a href="#"><i class="fa fa-edit color-1"></i>ویرایش پروفایل</a></li>
-                            <li><a href="#"><i class="fa fa-video-camera color-2"></i>اضافه کردن فیلم</a></li>
-                            <li><a href="#"><i class="fa fa-star color-3"></i>برگزیده</a></li>
-                            <li><a href="#"><i class="fa fa-sign-out color-4"></i>خروج</a></li>
-                        </ul>
+                @auth
+                    <div class="col-lg-2 col-md-2 col-sm-3 hidden-xs hidden-sm">
+                        <div class="dropdown">
+                            <a data-toggle="dropdown" href="#" class="user-area">
+                                <div class="thumb"><img src="{{ auth()->user()->gravatar }}" alt="">
+                                </div>
+                                <h2 class="mb-10">{{ auth()->user()->name }}</h2>
+                                <h3>25 اشتراک</h3>
+                                <i class="fa fa-angle-down"></i>
+                            </a>
+                            <ul class="dropdown-menu account-menu">
+                                <li><a href="#"><i class="fa fa-edit color-1"></i>ویرایش پروفایل</a></li>
+                                <li><a href="#"><i class="fa fa-video-camera color-2"></i>اضافه کردن فیلم</a></li>
+                                <li><a href="#"><i class="fa fa-star color-3"></i>برگزیده</a></li>
+                                <li>
+                                    <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
+                                        <button type="submit"><i class="fa fa-sign-out color-4"></i> {{ __('خروج') }}</button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
+                @endauth
+                @guest
+                    <div class="col-lg-2 col-md-2 col-sm-3 hidden-xs hidden-sm">
+                        <a href="{{ route('login.create') }}" class="btn btn-danger">ورود</a>
+                        <a href="{{ route('register.create') }}" class="btn btn-danger">ثبت نام</a>
+                    </div>
+                @endguest
+
             </div><!-- // row -->
         </div><!-- // container-full -->
     </header><!-- // header -->

@@ -10,6 +10,7 @@
         </div>
        
         <div class="form-output">
+            <x-validations-errors></x-validations-errors>
             <form action="{{ route('register.store') }}" method="POST">
                 @csrf
                 <div class="form-group label-floating">
@@ -41,7 +42,7 @@
                 <div class="remember">
                     <div class="checkbox">
                         <label>
-                            <input name="optionsCheckboxes" type="checkbox">
+                            <input name="remember" type="checkbox">
                             <a href="#">شرایط و ضوابط</a> سایت را قبول میکنم
                         </label>
                     </div>
@@ -59,7 +60,7 @@
                         aria-hidden="true"></i>ورود با توییتر</a>
 
 
-                <p>شما یک حساب کاربری دارید؟ <a href="07-log_in_page.html"> ورود!</a> </p>
+                <p>شما یک حساب کاربری دارید؟ <a href="{{route('login.create')}}"> ورود!</a> </p>
             </form>
         </div>
     </div>
