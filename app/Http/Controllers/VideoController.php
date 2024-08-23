@@ -19,10 +19,14 @@ class VideoController extends Controller
 
     public function store(StoreVideosRequest $request){
         // dd($request->all());
-       
-        Video::create(
-            $request->all()
-        );
+       // کد زیر باعث میشه یه کاربر ویدئو خودش رو به نام خودش ثبت کنه
+       $request->user()->videos()->create(
+        $request->all()
+    );
+    // خط کد زیر برای زمانی بود که کاربری لاگین نکرده بود و ویدئو ها کاربر خاصی نداشتند
+        // Video::create(
+        //     $request->all()
+        // );
         return redirect()->route('index')->with('success',__('massage.success'));
     }
 

@@ -12,7 +12,7 @@
             <a href="{{route('videos.edit',$video->slug)}}" class="title">
                 ویرایش
             </a>
-            <a class="channel-name" href="{{route('videos.show',$video->slug)}}">مهرداد سامی<span>
+            <a class="channel-name" href="{{route('videos.show',$video->slug)}}">{{$video->owner_name}}<span>
                     <i class="fa fa-check-circle"></i></span></a>
             <span class="views"><i class="fa fa-eye"></i>2.8M بازدید </span>
             <span class="date"><i class="fa fa-clock-o"></i>{{ $video->created_at }}</span>
